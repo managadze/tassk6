@@ -23,12 +23,17 @@ namespace tassk6
 
         public static void Repeat(List<int> lis, int M, int x, ref int m)
         {
-            if (m < M)
+            if (lis[x-1] < M)
             {
                 m = lis[x - 1] * lis[x - 2] + lis[x - 3];
-                lis.Add(m);
-                x++;
-                Repeat(lis, M, x, ref m);
+                if ((m== lis[x - 1])& (m == lis[x - 2]) &(m== lis[x - 3]))
+                    Error("Вычислить невозможно");
+                else
+                {
+                    lis.Add(m);
+                    x++;
+                    Repeat(lis, M, x, ref m);
+                }
             }            
         }
 

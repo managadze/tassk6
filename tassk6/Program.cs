@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace tassk6
 {
@@ -20,7 +17,6 @@ namespace tassk6
             Console.WriteLine(txt);
             Console.ResetColor();
         }
-
         public static void Repeat(List<int> lis, int M, int x, ref int m)
         {
             if (lis[x-1] < M)
